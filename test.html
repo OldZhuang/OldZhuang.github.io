@@ -21,6 +21,8 @@
                 var num = parseInt(Math.random()*(max-min+1)+min,10);
                 if(Me.includes("双子")||teammate.includes("双子")){
                     alert("哇,"+Me+"和"+teammate+"今晚组队上分获胜率"+(num+300)+"%!!!");
+                }else if(Me==""||teammate==""){
+                    alert("你或者队友星座不能为空");
                 }else{
                     alert("哇,"+Me+"和"+teammate+"今晚组队上分获胜率"+num+"%!!!");
                 }
