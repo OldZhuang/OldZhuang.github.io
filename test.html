@@ -14,7 +14,16 @@
         </style>
         <script>
             function main(){
-                alert("哇,双子座和金牛座今晚组队上分获胜率300%!!!");  
+                var min = 1;
+                var max = 100;
+                var Me = document.getElementById("Me").value;
+                var teammate = document.getElementById("teammate").value;
+                var num = parseInt(Math.random()*(max-min+1)+min,10);
+                if(Me.includes("双子")||teammate.includes("双子")){
+                    alert("哇,"+Me+"和"+teammate+"今晚组队上分获胜率"+(num+300)+"%!!!");
+                }else{
+                    alert("哇,"+Me+"和"+teammate+"今晚组队上分获胜率"+num+"%!!!");
+                }
             }
         </script>
     </head>
@@ -23,9 +32,9 @@
         <diy>
             <form>
                 你的星座:<br>
-                <input type="text" id="manName"><br><br>
+                <input type="text" id="Me"><br><br>
                 队友星座:<br>
-                <input type="text" id="ladayName"><br><br>
+                <input type="text" id="teammate"><br><br>
                 <button onclick="main()" type="submit">开始测试</button>
                 <p id="text"></p>
             </form>
